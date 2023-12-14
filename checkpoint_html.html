@@ -1,83 +1,85 @@
 <!DOCTYPE html>
-<html lang="en"
-style="background-color:black;">
+<!-- des videos, tableaux , selection, plus d'images , d'autres pages -->
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        function redirection(selection){
+            var choix=selection.value;
+            if (choix === "propos"){
+                window.location.href = "propos.html";
+            }else if (choix === "travail") {
+                window.location.href = "checkpoint_html.html"; 
+            }else if (choix === "cv") {
+                window.location.href = "checkpoint_html.html"; 
+            }else if (choix === contact ){
+                window.location.href = "checkpoint_html.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <nav style="font-size: large; background-color: green;color: blue;">
-            <a href="#"> à propos </a>
-            <a href="#"> travail </a>
-            <a href="#"> CV </a>
-            <a href="#"> contact </a>
-        </nav> 
+        <h1> MA PAGE TEST</h1>
+        <label for="choix">Sélectionnez une option :</label>
+        <select name="choix" id="choix" onchange="redirection(this)"> Ou allons nous? 
+            <option value="">Sélectionnez une option</option>
+            <option value="propos">propos</option>
+            <option value="travail">Travail</option>
+            <option value="cv">CV</option>
+            <option value="contact">Contact</option>
+        </select>
 
     </header>
     <br>
     <br>
     <main>
-        <div>
-            <h1 style="font-size: larger; background-color: blue;">à propos</h1>
-            <p style="color: white;"> Salut à tous; <br>
-                je me nomme thierno siradiou diallo, j'ai 20 ans et je suis actuellementen web 1 à Gomycode. <br>
-                je suis senegalais d'origine guinéenne et je vis au senegal depuis 2012. <br>
-                j'ai fais mes etudes du CM2 à la terminale au cours sainte marie de hann et j'ai ensuite fais 2 ans de <br>
-                classes préparatoires à l'institut mariste post-bac en filiere MPSI que j'ai validé en juin 2023. <br>
-                j'ai décidé de venir à Gomycode pour renforcer mes connaissances en informatique. <br>
-                merci de l'attention.
-            </p>
-        </div>
         <br>
         <br>
         <div>
-            <h1 style="font-size: larger; background-color: blue;">travail</h1>
-            <p style="color: white;"> Je ne suis actuellement travailleur, malgré cela j'ai eu a réalisé <br>
+            <h1 id="travail" style="font-size: larger; background-color: skyblue;">travail</h1>
+            <p> Je ne suis actuellement travailleur, malgré cela j'ai eu a réalisé <br>
                 quelques projets telque:
                 <br>
-                <ul style="color: white;">
+                <ul>
                     <li> Création d'un mini site e-commerce</li>
                     <li>etude et conception d'une maison connectée</li>
                 </ul>
             </p>
-            <p style="color: white;">j'ai aussi aussi occupé un poste en tant que membre du comité d'organisation de l'IMPB</p>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <p>j'ai aussi aussi occupé un poste en tant que membre du comité d'organisation de l'IMPB</p>
         </div>
         <br>
         <br>
         <div>
-            <h1 style="font-size: larger; background-color: blue;">cv</h1>
+            <h1 id="cv" style="font-size: larger; background-color: skyblue;">cv</h1>
             <img style="height: 700px; width: 500px;" src="cv.jpg" alt="cv.jpg">
         </div>
         <br>
         <br>
         <div>
-            <h1 style="font-size: larger; background-color: blue;">contact</h1> 
-            <form action="#">
-                <label style="color: white;" for="#">NOM</label>
+            <h1 id="contact" style="font-size: larger; background-color: skyblue;">contact</h1> 
+            <form class="form" action="#">
+                <label for="#">NOM</label>
                 <br>
-                <input style="background-color: black; color: white;" type="text" name="NOM">
+                <input type="text" name="NOM">
                 <br>
-                <label style="color: white;" for="#">PRENOM</label>
+                <label for="#">PRENOM</label>
                 <br>
-                <input style="background-color: black; color: white;" type="text" name="PRENOM">
+                <input type="text" name="PRENOM">
                 <br>
-                <label style="color: white;" for="#">NUMERO DE TELEPHONE</label>
+                <label for="#">NUMERO DE TELEPHONE</label>
                 <br>
-                <input style="background-color: black; color: white;" type="number" name="NUMERO DE TELEPHONE">
+                <input type="number" name="NUMERO DE TELEPHONE">
                 <br>
                 <button type="submit">soumettre</button>
             </form>
         </div>
     </main>
     <footer>
-        <h4 style="color: white;">
+        <h4>
             thierno siradiou diallo <br>
             +221 78 546 70 90 <br>
             diallo2ts@gmail.com <br>
